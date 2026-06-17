@@ -1,0 +1,118 @@
+/* Modern Minimalist — Clean sidebar-based CV template */
+
+.cv-container.modern-minimalist {
+  font-family: var(--font-sans);
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  background: #fff;
+  line-height: 1.6;
+}
+
+.cv-container.modern-minimalist .sidebar {
+  background: #1a365d;
+  color: #fff;
+  padding: var(--space-xl) var(--space-lg);
+  min-height: 100%;
+}
+
+.cv-container.modern-minimalist .sidebar h1 {
+  font-size: var(--font-xxl);
+  font-weight: 700;
+  margin-bottom: var(--space-xs);
+  color: #fff;
+}
+
+.cv-container.modern-minimalist .job-title {
+  font-size: var(--font-sm);
+  color: #90cdf4;
+  margin-bottom: var(--space-xl);
+  font-weight: 500;
+}
+
+.cv-container.modern-minimalist .sidebar-section {
+  margin-bottom: var(--space-lg);
+}
+
+.cv-container.modern-minimalist .sidebar-h3 {
+  font-size: var(--font-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #90cdf4;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: var(--space-xs);
+  margin-bottom: var(--space-sm);
+}
+
+.cv-container.modern-minimalist .contact-list,
+.cv-container.modern-minimalist .skills-list {
+  list-style: none;
+  padding: 0;
+}
+
+.cv-container.modern-minimalist .contact-list li,
+.cv-container.modern-minimalist .skills-list li {
+  font-size: var(--font-sm);
+  margin-bottom: var(--space-xs);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.cv-container.modern-minimalist .main-content {
+  padding: var(--space-xl);
+}
+
+.cv-container.modern-minimalist .section {
+  margin-bottom: var(--space-lg);
+}
+
+.cv-container.modern-minimalist .section h2 {
+  font-size: var(--font-lg);
+  font-weight: 700;
+  color: #1a365d;
+  border-bottom: 2px solid #1a365d;
+  padding-bottom: var(--space-xs);
+  margin-bottom: var(--space-md);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cv-container.modern-minimalist .experience-item {
+  margin-bottom: var(--space-md);
+}
+
+.cv-container.modern-minimalist .item-header {
+  margin-bottom: var(--space-xs);
+}
+
+.cv-container.modern-minimalist .item-title {
+  font-weight: 700;
+  font-size: var(--font-base);
+  color: #1a365d;
+}
+
+.cv-container.modern-minimalist .item-subtitle {
+  font-weight: 500;
+  color: #555;
+  font-size: var(--font-sm);
+}
+
+.cv-container.modern-minimalist .item-date {
+  color: #888;
+  font-size: var(--font-xs);
+  margin-top: 2px;
+}
+
+.cv-container.modern-minimalist .item-description {
+  font-size: var(--font-sm);
+  color: #555;
+  margin-top: var(--space-xs);
+}
+
+@media (max-width: 640px) {
+  .cv-container.modern-minimalist {
+    grid-template-columns: 1fr;
+  }
+}

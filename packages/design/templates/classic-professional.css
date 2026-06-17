@@ -1,0 +1,89 @@
+/* Classic Professional — Traditional serif-based CV template */
+
+.cv-container.classic-professional {
+  font-family: var(--font-serif);
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5rem 3rem;
+  background: #fff;
+  line-height: 1.6;
+}
+
+.cv-container.classic-professional .header {
+  text-align: center;
+  border-bottom: 2px solid #2c3e50;
+  padding-bottom: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.cv-container.classic-professional .header h1 {
+  font-size: var(--font-xxxl);
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+  color: #2c3e50;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.cv-container.classic-professional .contact-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  font-size: var(--font-sm);
+  color: #555;
+}
+
+.cv-container.classic-professional section {
+  margin-bottom: var(--space-lg);
+}
+
+.cv-container.classic-professional section h2 {
+  font-size: var(--font-lg);
+  font-weight: 700;
+  color: #2c3e50;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: var(--space-xs);
+  margin-bottom: var(--space-md);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.cv-container.classic-professional .experience-item {
+  margin-bottom: var(--space-md);
+}
+
+.cv-container.classic-professional .item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.cv-container.classic-professional .item-title {
+  font-weight: 700;
+  font-size: var(--font-base);
+  color: #2c3e50;
+}
+
+.cv-container.classic-professional .item-subtitle {
+  font-style: italic;
+  color: #555;
+  margin-bottom: var(--space-xs);
+}
+
+.cv-container.classic-professional .item-date {
+  color: #777;
+  font-size: var(--font-sm);
+}
+
+.cv-container.classic-professional ul {
+  padding-left: var(--space-lg);
+  margin-top: var(--space-sm);
+}
+
+.cv-container.classic-professional ul li {
+  margin-bottom: var(--space-xs);
+  font-size: var(--font-sm);
+}
