@@ -1,8 +1,10 @@
 import { Outlet, Link, useLocation } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 import './Layout.css';
 
 export default function Layout() {
   const location = useLocation();
+  const { isAuthenticated, user, logout } = useAuth();
   const isActive = (path) => location.pathname === path;
 
   return (
@@ -18,10 +20,23 @@ export default function Layout() {
             <Link to="/templates" className={`nav-link ${isActive('/templates') ? 'active' : ''}`}>
               Templates
             </Link>
-            <Link to="/dashboard" className={`nav-link ${isActive('/dashboard') ? 'active' : ''}`}>
-              Dashboard
-            </Link>
-            <Link to="/login" className="btn btn-primary nav-cta">Masuk</Link>
+
+            {isAuthenticated ? (
+              <>
+                <Link to="/dashboard" className={`nav-link ${isActive('/dashboard') ? 'active' : ''}`}>
+                  Dashboard
+                </Link>
+                <div className="user-menu">
+                  <div className="user-avatar">
+                    {user?.name?.charAt(0)?.toUpperCase() || 'U'}
+                  </div>
+                  <span className="user-name">{user?.name}</span>
+                  <button className="btn-logout" onClick={logout}>Keluar</button>
+                </div>
+              </>
+            ) : (
+              <Link to="/login" className="btn btn-primary nav-cta">Masuk</Link>
+            )}
           </nav>
         </div>
       </header>

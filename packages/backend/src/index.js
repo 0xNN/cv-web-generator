@@ -3,6 +3,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const authRoutes = require('./routes/auth');
+const cvsRoutes = require('./routes/cvs');
 const { verifyToken } = require('./middleware/auth');
 const db = require('./db');
 

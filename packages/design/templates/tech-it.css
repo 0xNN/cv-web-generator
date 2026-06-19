@@ -1,0 +1,91 @@
+@import url('./tokens.css');
+
+.cv-container.tech-it {
+  --primary: #6366f1; /* Indigo */
+  --secondary: #4f46e5;
+  --bg-dark: #111827;
+  --text-on-dark: #f9fafb;
+  --text-main: #374151;
+  --text-muted: #6b7280;
+  --border-color: #e5e7eb;
+
+  font-family: var(--font-sans);
+  color: var(--text-main);
+  max-width: 850px;
+  margin: 0 auto;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.tech-it .header {
+  background: var(--bg-dark);
+  color: var(--text-on-dark);
+  padding: var(--space-xl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tech-it .header h1 {
+  font-size: var(--font-xxxl);
+  margin: 0;
+  color: white;
+}
+
+.tech-it .header .contact-info {
+  text-align: right;
+  font-size: var(--font-sm);
+}
+
+.tech-it .main-layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: var(--space-xl);
+  padding: var(--space-xl);
+}
+
+.tech-it h2 {
+  font-size: var(--font-lg);
+  color: var(--primary);
+  border-left: 4px solid var(--primary);
+  padding-left: var(--space-sm);
+  margin-bottom: var(--space-md);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tech-it .experience-item {
+  margin-bottom: var(--space-lg);
+}
+
+.tech-it .item-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+}
+
+.tech-it .item-company {
+  color: var(--secondary);
+}
+
+.tech-it .item-date {
+  font-size: var(--font-xs);
+  color: var(--text-muted);
+}
+
+.tech-it .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-sm);
+}
+
+.tech-it .skill-tag {
+  background: #f3f4f6;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-xs);
+  font-weight: 600;
+  color: var(--bg-dark);
+  border-left: 2px solid var(--primary);
+}

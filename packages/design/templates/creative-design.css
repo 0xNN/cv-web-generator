@@ -1,0 +1,93 @@
+@import url('./tokens.css');
+
+.cv-container.creative-design {
+  --accent: #ff4757; /* Radiant Red/Coral */
+  --secondary: #2f3542;
+  --text-main: #2f3542;
+  --bg-soft: #f1f2f6;
+
+  font-family: var(--font-sans);
+  color: var(--text-main);
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+}
+
+.creative-design .top-bar {
+  height: 10px;
+  background: var(--accent);
+}
+
+.creative-design .hero {
+  padding: var(--space-xxl) var(--space-xl);
+  background: var(--bg-soft);
+  text-align: center;
+}
+
+.creative-design h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  margin: 0;
+  line-height: 1;
+  color: var(--secondary);
+}
+
+.creative-design .subtitle {
+  font-size: var(--font-xl);
+  color: var(--accent);
+  font-weight: 300;
+  margin-top: var(--space-sm);
+}
+
+.creative-design .content {
+  padding: var(--space-xl);
+  display: flex;
+  gap: var(--space-xxl);
+}
+
+.creative-design .left-col {
+  flex: 2;
+}
+
+.creative-design .right-col {
+  flex: 1;
+}
+
+.creative-design h2 {
+  font-size: var(--font-xl);
+  margin-bottom: var(--space-lg);
+  position: relative;
+  display: inline-block;
+}
+
+.creative-design h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 40px;
+  height: 4px;
+  background: var(--accent);
+}
+
+.creative-design .portfolio-link {
+  display: block;
+  padding: var(--space-md);
+  background: var(--secondary);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  font-weight: bold;
+  margin-top: var(--space-md);
+}
+
+.creative-design .skill-circle {
+  display: inline-block;
+  padding: var(--space-sm) var(--space-md);
+  border: 2px solid var(--accent);
+  border-radius: 50px;
+  margin-right: var(--space-xs);
+  margin-bottom: var(--space-xs);
+  font-size: var(--font-sm);
+}

@@ -1,15 +1,23 @@
 import { Link } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 import './DashboardPage.css';
 
 export default function DashboardPage() {
+  const { user, isPro } = useAuth();
   const savedCVs = [];
 
   return (
     <div className="dashboard-page page-container">
       <div className="dashboard-header">
-        <div>
+        <div className="dashboard-welcome">
           <h1 className="page-title">Dashboard</h1>
-          <p className="page-subtitle">Kelola CV-mu di sini.</p>
+          <h2>Halo, {user?.name || 'Pengguna'}! 👋</h2>
+          <p>
+            Kamu menggunakan akun{' '}
+            <span className={`subscription-badge ${isPro ? 'pro' : 'free'}`}>
+              {isPro ? 'PRO' : 'Free'}
+            </span>
+          </p>
         </div>
         <Link to="/builder" className="btn btn-primary">+ Buat CV Baru</Link>
       </div>
