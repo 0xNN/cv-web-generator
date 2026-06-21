@@ -26,6 +26,9 @@ app.use((req, res, next) => {
 // Auth Routes
 app.use('/api/auth', authRoutes);
 
+// CV CRUD Routes
+app.use('/api/cvs', cvsRoutes);
+
 // Protected Test Route
 app.get('/api/protected', verifyToken, async (req, res) => {
   try {
