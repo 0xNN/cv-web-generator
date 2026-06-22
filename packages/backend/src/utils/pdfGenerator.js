@@ -30,6 +30,9 @@ function generatePDF(cv, res) {
   if (cv.template_id === 'tech-it') {
     primaryColor = '#312e81'; // Indigo 900
     accentColor = '#4f46e5'; // Indigo 600
+  } else if (cv.template_id === 'modern-minimalist') {
+    primaryColor = '#1a1a1a'; // Dark
+    accentColor = '#007bff'; // Blue
   } else if (cv.template_id === 'creative-design') {
     primaryColor = '#881337'; // Rose 900
     accentColor = '#db2777'; // Pink 600
