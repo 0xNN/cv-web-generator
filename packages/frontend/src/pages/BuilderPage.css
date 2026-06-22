@@ -1,21 +1,69 @@
 .builder-page { padding: var(--space-lg) 0 var(--space-xxl); }
-.builder-layout { display: grid; grid-template-columns: 220px 1fr; gap: var(--space-lg); }
-.builder-nav { display: flex; flex-direction: column; gap: var(--space-xs); }
-.builder-nav-btn {
-  text-align: left; padding: var(--space-sm) var(--space-md);
-  border: 1px solid transparent; border-radius: var(--radius-md); background: none;
-  font-size: var(--font-sm); color: var(--color-text-secondary); font-weight: 500; transition: all 0.2s ease;
+
+/* Template selector */
+.template-selector { display: flex; gap: var(--space-sm); margin-bottom: var(--space-xl); flex-wrap: wrap; }
+.template-option {
+  padding: var(--space-sm) var(--space-md);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  font-size: var(--font-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
-.builder-nav-btn:hover { background-color: var(--color-bg-secondary); color: var(--color-text); }
-.builder-nav-btn.active { background-color: var(--color-primary-light); color: var(--color-primary); border-color: var(--color-primary); font-weight: 600; }
-.builder-form { padding: var(--space-xl); }
+.template-option:hover { border-color: var(--color-primary-light); }
+.template-option.active { border-color: var(--color-primary); background: var(--color-primary-light); color: var(--color-primary); }
+.template-option.pro-required { opacity: 0.6; }
+.template-badge-free { color: var(--color-success); font-size: 0.65rem; font-weight: 700; text-transform: uppercase; }
+.template-badge-pro { color: var(--color-primary); font-size: 0.65rem; font-weight: 700; text-transform: uppercase; }
+
+/* Two-column layout */
+.builder-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); }
+.builder-form-col { overflow-y: auto; max-height: calc(100vh - 200px); }
+.builder-preview-col { position: sticky; top: 80px; align-self: start; }
+
+.preview-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-md); }
+.preview-header h3 { font-size: var(--font-md); color: var(--color-secondary); }
+.preview-actions { display: flex; gap: var(--space-sm); }
+
+/* Preview frame */
+.cv-preview-frame {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  /* Scale the preview down */
+  transform-origin: top left;
+}
+
+/* Form sections */
 .builder-section-title { font-size: var(--font-lg); color: var(--color-secondary); margin-bottom: var(--space-lg); padding-bottom: var(--space-sm); border-bottom: 1px solid var(--color-border); }
 .builder-repeater-item { padding: var(--space-md); margin-bottom: var(--space-md); background: var(--color-bg-secondary); border-radius: var(--radius-md); border: 1px solid var(--color-border); }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); }
-.builder-textarea { resize: vertical; min-height: 100px; }
-.builder-actions { display: flex; gap: var(--space-md); margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--color-border); }
-@media (max-width: 768px) {
-  .builder-layout { grid-template-columns: 1fr; }
-  .builder-nav { flex-direction: row; flex-wrap: wrap; }
+.builder-textarea { resize: vertical; min-height: 80px; }
+
+/* Section tabs */
+.builder-tabs { display: flex; gap: var(--space-xs); margin-bottom: var(--space-lg); flex-wrap: wrap; }
+.builder-tab {
+  padding: var(--space-xs) var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  font-size: var(--font-sm);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.builder-tab:hover { background: var(--color-bg-secondary); }
+.builder-tab.active { background: var(--color-primary); color: #fff; border-color: var(--color-primary); }
+
+/* Status messages */
+.save-status { font-size: var(--font-sm); color: var(--color-success); margin-top: var(--space-sm); }
+.save-status.error { color: var(--color-error); }
+
+@media (max-width: 900px) {
+  .builder-two-col { grid-template-columns: 1fr; }
+  .builder-preview-col { position: static; }
   .form-row { grid-template-columns: 1fr; }
 }
