@@ -1,12 +1,16 @@
-.auth-page { display: flex; justify-content: center; padding: var(--space-xxl) 0; }
+.auth-page { display: flex; justify-content: center; padding: var(--space-xxl) 0; animation: fadeIn 0.4s ease-out; }
 .auth-card { width: 100%; max-width: 420px; padding: var(--space-xxl); }
 .auth-title { font-size: var(--font-xxl); text-align: center; margin-bottom: var(--space-xs); color: var(--color-secondary); }
 .auth-subtitle { text-align: center; color: var(--color-text-secondary); margin-bottom: var(--space-xl); }
 .auth-error {
-  background-color: #fef2f2; border: 1px solid #fecaca; color: var(--color-error);
-  padding: var(--space-sm) var(--space-md); border-radius: var(--radius-md);
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: var(--color-error);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
   font-size: var(--font-sm); margin-bottom: var(--space-md); text-align: center;
 }
 .auth-submit { width: 100%; padding: var(--space-md); font-size: var(--font-base); margin-top: var(--space-md); }
+.auth-submit:hover { transform: translateY(-2px); }
 .auth-footer-text { text-align: center; font-size: var(--font-sm); color: var(--color-text-secondary); margin-top: var(--space-lg); }
 .auth-footer-text a { font-weight: 500; }

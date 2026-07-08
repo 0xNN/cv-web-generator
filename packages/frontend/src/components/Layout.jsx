@@ -1,5 +1,6 @@
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import ThemeToggle from './ThemeToggle';
 import './Layout.css';
 
 export default function Layout() {
@@ -17,6 +18,8 @@ export default function Layout() {
           </Link>
 
           <nav className="nav">
+            <ThemeToggle />
+
             <Link to="/templates" className={`nav-link ${isActive('/templates') ? 'active' : ''}`}>
               Templates
             </Link>

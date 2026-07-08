@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const cors = require('cors');
 require('dotenv').config();
 
@@ -57,18 +58,16 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-// Base endpoint
-app.get('/', (req, res) => {
-  res.json({
-    name: 'CVLabs API',
-    version: '1.0.0',
-    description: 'Core backend service for CVLabs Resume Builder'
-  });
-});
+// Serve production frontend build
+const frontendDist = path.join(__dirname, '../../frontend/dist');
+app.use(express.static(frontendDist));
 
-// 404 Handler
+// SPA fallback — serve index.html for all non-API routes (Express 5 compatible)
 app.use((req, res) => {
-  res.status(404).json({ error: 'Not Found' });
+  if (req.path.startsWith('/api')) {
+    return res.status(404).json({ error: 'Not Found' });
+  }
+  res.sendFile(path.join(frontendDist, 'index.html'));
 });
 
 // Global Error Handler
