@@ -87,3 +87,38 @@
   margin-bottom: var(--space-xs);
   font-size: var(--font-sm);
 }
+
+/* Dark mode */
+html.dark .cv-container.classic-professional {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+html.dark .cv-container.classic-professional .header {
+  border-bottom-color: #475569;
+}
+
+html.dark .cv-container.classic-professional .header h1 {
+  color: #f1f5f9;
+}
+
+html.dark .cv-container.classic-professional .contact-info {
+  color: #94a3b8;
+}
+
+html.dark .cv-container.classic-professional section h2 {
+  color: #f1f5f9;
+  border-bottom-color: #475569;
+}
+
+html.dark .cv-container.classic-professional .item-title {
+  color: #e2e8f0;
+}
+
+html.dark .cv-container.classic-professional .item-subtitle {
+  color: #94a3b8;
+}
+
+html.dark .cv-container.classic-professional .item-date {
+  color: #64748b;
+}

@@ -89,3 +89,36 @@
   color: var(--bg-dark);
   border-left: 2px solid var(--primary);
 }
+
+/* Dark mode */
+html.dark .cv-container.tech-it {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+html.dark .cv-container.tech-it h2 {
+  color: #818cf8;
+  border-left-color: #818cf8;
+}
+
+html.dark .cv-container.tech-it .header {
+  background: #0f172a;
+}
+
+html.dark .cv-container.tech-it .header h1 {
+  color: #f1f5f9;
+}
+
+html.dark .cv-container.tech-it .item-company {
+  color: #818cf8;
+}
+
+html.dark .cv-container.tech-it .item-date {
+  color: #64748b;
+}
+
+html.dark .cv-container.tech-it .skill-tag {
+  background: #334155;
+  color: #e2e8f0;
+  border-left-color: #818cf8;
+}

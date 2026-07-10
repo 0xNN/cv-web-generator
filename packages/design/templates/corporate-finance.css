@@ -60,3 +60,22 @@
   font-style: italic;
   color: var(--text-muted);
 }
+
+/* Dark mode */
+html.dark .cv-container.corporate-finance {
+  background: #1e293b;
+  color: #e2e8f0;
+  --navy: #e2e8f0;
+  --gold: #fbbf24;
+  --text-main: #e2e8f0;
+  --text-muted: #94a3b8;
+  --border-light: #475569;
+}
+
+html.dark .corporate-finance .header {
+  border-bottom-color: #fbbf24;
+}
+
+html.dark .corporate-finance h1 {
+  color: #f1f5f9;
+}

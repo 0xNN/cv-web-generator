@@ -91,3 +91,21 @@
   margin-bottom: var(--space-xs);
   font-size: var(--font-sm);
 }
+
+/* Dark mode */
+html.dark .cv-container.creative-design {
+  background: #1e293b;
+  color: #e2e8f0;
+  --accent: #f87171;
+  --secondary: #e2e8f0;
+  --text-main: #e2e8f0;
+  --bg-soft: #0f172a;
+}
+
+html.dark .creative-design h1 {
+  color: #f1f5f9;
+}
+
+html.dark .creative-design .portfolio-link {
+  background: #334155;
+}

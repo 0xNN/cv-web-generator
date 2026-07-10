@@ -116,3 +116,47 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Dark mode */
+html.dark .cv-container.modern-minimalist {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+html.dark .cv-container.modern-minimalist .sidebar {
+  background: #0f172a;
+}
+
+html.dark .cv-container.modern-minimalist .sidebar h1 {
+  color: #f1f5f9;
+}
+
+html.dark .cv-container.modern-minimalist .job-title {
+  color: #60a5fa;
+}
+
+html.dark .cv-container.modern-minimalist .sidebar-h3 {
+  color: #60a5fa;
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+html.dark .cv-container.modern-minimalist .section h2 {
+  color: #60a5fa;
+  border-bottom-color: #475569;
+}
+
+html.dark .cv-container.modern-minimalist .item-title {
+  color: #e2e8f0;
+}
+
+html.dark .cv-container.modern-minimalist .item-subtitle {
+  color: #94a3b8;
+}
+
+html.dark .cv-container.modern-minimalist .item-date {
+  color: #64748b;
+}
+
+html.dark .cv-container.modern-minimalist .item-description {
+  color: #94a3b8;
+}
